@@ -33,7 +33,6 @@ class Encoder(nn.Module):
     ):
         super().__init__()
         self.model = AutoModel.from_pretrained(model_name)
-        self.cross_entropy = nn.CrossEntropyLoss(reduction="mean")
 
         self.normalized = normalized
         self.margin = margin
@@ -106,8 +105,7 @@ class Encoder(nn.Module):
 
         target = torch.arange(scores.size(0), device=scores.device, dtype=torch.long)
         target = target * group_size
-        # loss = self.compute_loss(scores, target)
-        loss = self.cross_entropy(scores, target)
+        loss = self.compute_loss(scores, target)
 
         out = EncoderOutput(
             loss=loss,
