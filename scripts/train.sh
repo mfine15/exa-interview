@@ -1,0 +1,20 @@
+python3  src/embeddings.py \
+--output_dir models/large_run_2 \
+--model_name_or_path BAAI/bge-large-en-v1.5 \
+--train_data ./data/synthetic_queries.jsonl \
+--test_data ./data/synthetic_queries_test.json \
+--learning_rate 4e-5 \
+--fp16 \
+--num_train_epochs 10 \
+--per_device_train_batch_size 4 \
+--dataloader_drop_last true \
+--normalized true \
+--temperature 0.02 \
+--query_max_len 64 \
+--doc_max_len 256 \
+--train_group_size 5 \
+--logging_steps 10 \
+--evaluation_strategy "steps" \
+--eval_steps 200 \
+--margin 10.0 \
+--synthetic_data true

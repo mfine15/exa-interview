@@ -1,0 +1,10 @@
+*.pickle
+data/
+__pycache__/
+models/
+model/**
+results/
+data/
+env/
+out/
+.env
