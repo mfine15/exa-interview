@@ -1,7 +1,7 @@
 # Exa Interview
 Below is the work I did with Exa to train an embedding model to learn to distinguish similar-but-irrelevant queries.
 
-See writeup.md for theoretical background and training details
+See exa_writeup.pdf for theoretical background and training details
 
 ## Using the model
 
