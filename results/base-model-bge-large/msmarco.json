@@ -1,0 +1,10 @@
+{
+    "dataset_revision": null,
+    "mteb_dataset_name": "MSMarco",
+    "mteb_version": "1.1.2",
+    "test": {
+        "evaluation_time": 418.72,
+        "MRR@100 (Dev)": 0.440,
+        "MRR@100 (Eval)": 0.398
+    }
+}
